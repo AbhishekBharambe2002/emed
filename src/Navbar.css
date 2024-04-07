@@ -1,0 +1,40 @@
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the navigation bar */
+  .navbar {
+    display: flex; /* Use flexbox to position elements */
+    justify-content: space-between; /* Space between the logo and links */
+    background-color: #333; /* Background color */
+    padding: 10px; /* Add some padding to the navbar */
+  }
+  
+  /* Style the logo */
+  .logo {
+    width: 50px; /* Adjust the logo's width as needed */
+  }
+  
+  /* Style the list items */
+  .nav-links {
+    display: flex; /* Display items horizontally */
+  }
+  
+  /* Style the list items (li) */
+  .nav-links li {
+    margin: 0 10px; /* Add spacing between items */
+  }
+  
+  /* Style the links */
+  .nav-links li a {
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* Text color */
+    font-weight: bold; /* Bold text */
+  }
+  
+  /* Change link color on hover */
+  .nav-links li a:hover {
+    color: #00f; /* Hover color */
+  }

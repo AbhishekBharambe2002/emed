@@ -1,0 +1,16 @@
+/* Product.css */
+.product-item {
+    background: #f8f8f8;
+    margin: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .product-item img {
+    width: 100%; /* Set the image width to 100% of its container */
+    max-height: 200px; /* Optionally, set a maximum height to avoid stretching */
+  }
+  
