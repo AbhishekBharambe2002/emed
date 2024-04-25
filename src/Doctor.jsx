@@ -12,11 +12,11 @@ function Doctor() {
   const handleLogin = (e) => {
     e.preventDefault();
     
-    axios.post('http://localhost:3001/', { username, password })
+    axios.post('http://localhost:3001/doctor', { username, password })
       .then(results => {
         console.log(results)
         if (results.data === "Success") {
-          navigate("/Productlist")
+          navigate("/docprescription")
         }
       })
       .catch(err => console.log(err))

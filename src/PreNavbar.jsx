@@ -18,16 +18,6 @@ const Navbar = () => {
         <Image src={medical} alt="Logo" className="logo" boxSize="50px" />
       </Link>
       <Flex as="ul" className="nav-links" listStyleType="none">
-      <Link to="/doctorinfo">
-          <Text as="li" mr="4">
-            DocInfo
-          </Text>
-        </Link>
-        <Link to="/productlist">
-          <Text as="li" mr="4">
-            Products
-          </Text>
-        </Link>
         <Link to="/About">
           <Text as="li" mr="4">
             About

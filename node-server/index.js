@@ -1,6 +1,5 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
 const cors = require("cors");
 const EmployeeModel = require("./models/Employees");
 const DoctorModel = require('./models/Doctor');
@@ -15,8 +14,7 @@ const server = http.createServer(app);
 app.use(express.json());
 app.use(cors());
 
-app.use(bodyParser.json({ limit: '10mb', extended: true }));
-app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }));
+
 
 mongoose.connect("mongodb://127.0.0.1:27017/employee");
 console.log("database running");
@@ -83,22 +81,16 @@ app.get('/docprescription', async (req, res) => {
 });
 
 
+const products = require('./data');
 
-
-{/*const csv = require('csv-parser');
-const fs = require('fs');
-const path = require('path');
-
-app.get('/medicine_dataset', (req, res) => {
-  const results = [];
-  const filePath = path.join(__dirname,'medicine_dataset.csv');
-  fs.createReadStream(filePath)
-    .pipe(csv())
-    .on('data', (data) => results.push(data))
-    .on('end', () => {
-      res.json(results.slice(0, 50)); // Send the first 50 results
-    });
-});*/}
+app.get('/productlist', async (req, res) => {
+  try {
+    res.json({ products });
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
 
 
 
