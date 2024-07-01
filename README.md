@@ -17,46 +17,38 @@ Upload a prescription image.
 Sign up and login with your credentials.
 Navigate to the prescription page to view uploaded prescriptions.
 
-
 **Installation**
 
 1. **Clone the repository**:
-    
-bash
-    git clone
+    ```bash
+    git clone 
     cd emed
-
+    ```
 
 2. **Install dependencies for the backend**:
-    
-bash
+    ```bash
     cd node-server
     npm install
-
+    ```
 
 3. **Install dependencies for the frontend**:
-    
-bash
-    cd emed
+    ```bash
     npm install
-
+    ```
 
 4. **Set up environment variables**:
-    Create a .env file in the backend directory and add your MongoDB URI
-   and any other required environment variables.
+    Create a `.env` file in the `backend` directory and add your MongoDB URI  any other required environment variables.(Replace the mongo(moongoose.connect) link
+   in index.js with the enviroment variable
 
 
 6. **Run the application**:
-    
-bash
+    ```bash
     # Run the backend server
     cd node-server
     npm start
 
     # Run the frontend development server
-    cd emed
     npm start
-
-
+    ```
 
 
